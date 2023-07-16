@@ -47,11 +47,14 @@ int main() {
     double dotProductASM = computeDotProductASM(n, A, B);
     //end = clock();
     //double cpu_time_used_asm = ((double)(end - start)) / CLOCKS_PER_SEC;
+    
+    for (int j = 0; j < 30; j++) {
+        printf("Time taken (C): %lf seconds\n", cpu_time_used_c);
+    }
 
-    printf("Dot Product (C): %lf\n", dotProductC);
-    printf("Time taken (C): %lf seconds\n", cpu_time_used_c);
+    printf("Dot Product (C): %lf\n", dotProductC/30);
 
-    printf("Dot Product (ASM): %lf\n", dotProductASM);
+    //printf("Dot Product (ASM): %lf\n", dotProductASM);
     //printf("Time taken (ASM): %lf seconds\n", cpu_time_used_asm);
 
     //Print the random values used
